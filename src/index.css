@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+  background: rgb(29, 28, 28);
+  background-image: url("./assets/bgblend.jpg"),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-blend-mode: overlay; /* Blend the image with the black color */
+  background-size: cover;
+  background-position: center;
+  /* background-attachment:; */
+  color: white;
+}
+
+nav ul li .active span {
+  background: #8d4aea;
+  scale: 1.1;
+}
+@media (max-width: 786px) {
+  body {
+    background: rgb(29, 28, 28);
+    background-image: url("./assets/zarzar.jpg"),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-blend-mode: overlay; /* Blend the image with the black color */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+  }
+}
