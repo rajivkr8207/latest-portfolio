@@ -42,7 +42,7 @@ const Profile = () => {
           <span className="lg:w-[17rem] overflow-hidden w-[80%]  lg:h-[18rem] h-[20rem] mx-auto border-4 border-purple-500 rounded-xl">
             <img
               src={profilepic}
-              alt=""
+              alt="My profile pic"
               className="w-full h-full mx-auto object-cover "
             />
           </span>
