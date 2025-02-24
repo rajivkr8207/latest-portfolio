@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 import { MdPermContactCalendar } from "react-icons/md";
@@ -19,7 +18,7 @@ const Navbar = () => {
     },
     {
       to: "/tools",
-      text: "Tools",
+      text: "Skils",
       icon: <FaTools className="mx-auto text-3xl " />,
     },
     {
@@ -33,6 +32,7 @@ const Navbar = () => {
     visible: { y: 0, opacity: 1, transition: { duration:
       1 } },
   }
+  
   return (
     <>
       <motion.header  
@@ -41,15 +41,12 @@ const Navbar = () => {
       variants={fadeupanimation}
       className="lg:flex fixed bottom-0 z-20 ">
         <nav className="flex justify-center items-center   w-[100vw]">
-          <ul className="flex  border gap-5 rounded-2xl px-5 py-2 bg-black/30 backdrop-blur-lg lg:w-auto md:w-[40vw] w-[95vw] justify-between">
+          <ul className="flex  border gap-5 lg:mb-2 rounded-2xl px-5 py-2 bg-black/30 backdrop-blur-lg lg:w-auto md:w-[40vw] w-[95vw] justify-between">
             {links.map((item, index) => {
               return (
                 <li key={index}>
                   <NavLink
                     to={item.to}
-                    onClick={() => {
-                      window.scroll(0, 0);
-                    }}
                     data-tooltip-id={item.text + index}
                     className={`bg-purple-500   
                               text-xl gap-3 text-white `}

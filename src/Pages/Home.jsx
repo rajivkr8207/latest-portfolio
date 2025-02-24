@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Profile from "../Components/Profile";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Collaborate from "../Components/Collaborate";
 import Projectcomponents from "../Components/Projectcomponents";
@@ -9,13 +9,17 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Smooth scrolling to top
+  }, [pathname]); // Runs when the page (pathname) changes
 
   const fadeUpAnimation = {
     hidden: { y: 50, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -24,11 +28,11 @@ const Home = () => {
       <div className="lg:hidden flex">
         <Profile />
       </div>
-      
-      <motion.div 
+
+      <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false}}
+        viewport={{ once: false }}
         variants={fadeUpAnimation}
         className="md:px-auto"
       >
@@ -67,7 +71,10 @@ const Home = () => {
 
           <div className="flex flex-col gap-4 my-8">
             {/* Years of Experience Section */}
-            <motion.div variants={fadeUpAnimation} className="flex items-center gap-6 lg:mx-0 mx-auto">
+            <motion.div
+              variants={fadeUpAnimation}
+              className="flex items-center gap-6 lg:mx-0 mx-auto"
+            >
               <p className="lg:text-lg text-base text-gray-400 flex items-center group">
                 Years of Experience
                 <FaArrowRightLong className="text-2xl text-gray-400 group-hover:text-purple-600 ml-3 group-hover:ml-5 transition-all duration-300" />
@@ -78,7 +85,10 @@ const Home = () => {
             </motion.div>
 
             {/* Projects Section */}
-            <motion.div variants={fadeUpAnimation} className="flex items-center lg:justify-start justify-center gap-6">
+            <motion.div
+              variants={fadeUpAnimation}
+              className="flex items-center lg:justify-start justify-center gap-6"
+            >
               <p className="lg:text-lg text-base text-gray-400 flex items-center group">
                 Projects
                 <FaArrowRightLong className="text-2xl text-gray-400 group-hover:text-purple-600 ml-3 group-hover:ml-5 transition-all duration-300" />

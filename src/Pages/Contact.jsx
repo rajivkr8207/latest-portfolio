@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Profile from "../Components/Profile";
 import { useForm } from "@formspree/react";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mjkgvavd");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Smooth scrolling to top
+  }, [pathname]); // Runs when the page (pathname) changes
 
   useEffect(() => {
     if (state.succeeded) {
       toast.success("Message sent successfully!");
+      navigate("/") // Redirect after success
       setLoading(false);
-      setTimeout(() => navigate("/"), 1500); // Redirect after success
     }
   }, [state.succeeded, navigate]);
 
@@ -36,6 +40,10 @@ const Contact = () => {
 
   return (
     <>
+{loading?
+    <div className="w-full h-screen absolute top-0 left-0 z-10">
+      <img src="" alt="" />
+    </div> : null }
       <div>
         <motion.h1
           initial="hidden"

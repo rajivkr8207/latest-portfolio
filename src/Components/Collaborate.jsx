@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 const Collaborate = () => {
   const navigate = useNavigate();
   const fadeupanimation = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -44,10 +43,10 @@ const Collaborate = () => {
         </div>
 
         <div>
-          <p className="lg:text-md text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quis?
-            Debitis pariatur quis eius laudantium corporis fugit necessitatibus
-            at. Totam.
+          <p className="lg:text-base text-sm">
+            Transform your ideas into reality with cutting-edge design and
+            development solutions. Together, we’ll craft seamless, user-focused
+            experiences that drive success and leave a lasting impression.
           </p>
         </div>
       </motion.div>

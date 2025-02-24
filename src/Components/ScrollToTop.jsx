@@ -3,9 +3,8 @@ import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to top
+    window.scrollTo(0,0); // Smooth scrolling to top
   }, [pathname]); // Runs when the page (pathname) changes
 
   return null;

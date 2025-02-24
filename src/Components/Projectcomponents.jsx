@@ -1,4 +1,3 @@
-import React from "react";
 import myself from "../assets/myself.png";
 import { Link, useNavigate } from "react-router-dom";
 import projectdata from "../assets/Data/Project";

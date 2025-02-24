@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scrollbar-width: thin; 
+  scrollbar-color: #9333EA transparent;
+}
+
 html{
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -26,10 +35,7 @@ nav ul li .active span {
 }
 @media (max-width: 786px) {
   body {
-    background: rgb(29, 28, 28);
-    background-image: url("./assets/zarzar.jpg"),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    background-blend-mode: overlay; /* Blend the image with the black color */
+    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

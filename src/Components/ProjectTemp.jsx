@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import myself from "../assets/myself.png";
+import  { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import projectdatajson from "../assets/Data/Project";
 import ReactLoading from "react-loading";
 import { motion } from "framer-motion";
@@ -8,7 +7,6 @@ import { motion } from "framer-motion";
 const ProjectTemp = () => {
   const { name } = useParams();
   const [projectdata, setProjectdata] = useState();
-  const navigate = useNavigate();
 
   const fetchjson = (name) => {
     const projectdata = projectdatajson.find(
@@ -47,13 +45,14 @@ const ProjectTemp = () => {
   return (
     <>
       <div className=" flex justify-start lg:flex-row flex-col lg:gap-20 gap-10 lg:mx-[6rem]  ">
-        <div className="lg:w-[23rem] w-full flex justify-start  lg:mx-3  ">
-          <motion.div
+        <div className="lg:w-[36rem] lg:relative    h-auto w-full    lg:mx-3   ">
+       <div className="lg:h-[100vh] w-[98%] lg:mx-0 mx-auto flex justify-center flex-col   lg:fixed lg:top-0">
+       <motion.div
             initial="hidden"
             whileInView="visible"
              viewport={{ once: false }}
             variants={fadeUpAnimation}
-            className="lg:w-[22rem] md:w-[22rem] md:mx-auto w-full mx-2  rounded-xl bg-[#2B2C2D]/50  py-5 lg:h-[34rem] h-[35rem] flex flex-col justify-start lg:p-5  lg:sticky lg:top-0 lg:z-40"
+            className="lg:w-[22rem] md:w-[22rem] lg:mx-0 md:mx-auto w-[98%] mx-2  rounded-xl bg-[#2B2C2D]/50  lg:py-5 py-3 lg:h-[34rem] h-[35rem] flex flex-col justify-start lg:p-5 sticky top-0 "
           >
             <span className="lg:w-[20rem] overflow-hidden w-[95%] h-[16rem] mx-auto border-4 border-purple-500 rounded-xl">
               <img
@@ -101,13 +100,14 @@ const ProjectTemp = () => {
               ) : null}
             </div>
           </motion.div>
+       </div>
         </div>
         <motion.div
           initial="hidden"
           whileInView="visible"
            viewport={{ once: false }}
           variants={fadedownAnimation}
-          className="w-full lg:mt-5 mt-0 "
+          className="w-full lg:mt-5 mt-0 overflow-hidden "
         >
           <h1 className="lg:text-5xl text-3xl font-bold lg:text-start text-center lg:mx-0  mx-3 font-[Playfair-Display]">
             {projectdata.title}

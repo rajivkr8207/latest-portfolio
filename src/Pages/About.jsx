@@ -1,12 +1,17 @@
-import React from "react";
-import Profile from "../Components/Profile";
 import { TypeAnimation } from "react-type-animation";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
 import Collaborate from "../Components/Collaborate";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import resume from '../assets/Resume(Rajiv).pdf'
 
 const About = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Smooth scrolling to top
+  }, [pathname]); // Runs when the page (pathname) changes
+
   const allabout = [
     {
       title: "Educational",
@@ -26,6 +31,9 @@ const About = () => {
     },
   ];
 
+  const handledownload = ()=>{
+    window.open(resume, "_blank")
+  }
   // Animation for fade-up effect
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
@@ -51,7 +59,7 @@ const About = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-           viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: false, amount: 0.6 }}
           variants={fadedownAnimation}
           className="text-center lg:text-start"
         >
@@ -82,17 +90,22 @@ const About = () => {
           </div>
           <p className="my-4 lg:text-lg text-sm">
             Motivated{" "}
-            <span className="text-purple-400 font-semibold">full-stack developer</span>{" "}
-            with expertise in modern web technologies. Currently pursuing a degree at IITM, 
-            I am passionate about building scalable, user-friendly applications and continuously learning to enhance my 
-            skills through innovative projects like the Article Management System.
+            <span className="text-purple-400 font-semibold">
+              full-stack developer
+            </span>{" "}
+            with expertise in modern web technologies. Currently pursuing a
+            degree at IITM, I am passionate about building scalable,
+            user-friendly applications and continuously learning to enhance my
+            skills through innovative projects like the Article Management
+            System.
           </p>
         </motion.div>
 
         {/* Experience & Projects Section */}
         <motion.div
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.6 }}
           variants={fadeUp}
           className="flex flex-col gap-4 my-8"
         >
@@ -105,16 +118,30 @@ const About = () => {
               Years of Experience
               <FaArrowRightLong className="text-2xl text-gray-400 ml-3 transition-all group-hover:text-purple-600 group-hover:ml-5 duration-300" />
             </p>
-            <h1 className="lg:text-4xl text-2xl font-bold text-white">Fresher</h1>
+            <h1 className="lg:text-4xl text-2xl font-bold text-white">
+              Fresher
+            </h1>
           </motion.div>
 
           {/* Projects */}
-          <motion.div variants={fadeUp} className="flex items-center gap-6 mx-auto lg:mx-0">
+          <motion.div
+            variants={fadeUp}
+            className="flex items-center gap-6 mx-auto lg:mx-0"
+          >
             <p className="lg:text-lg text-base text-gray-400 flex items-center group">
               Projects
               <FaArrowRightLong className="text-2xl text-gray-400 ml-3 transition-all group-hover:text-purple-600 group-hover:ml-5 duration-300" />
             </p>
             <h1 className="lg:text-4xl text-2xl font-bold text-white">+5</h1>
+          </motion.div>
+          <motion.div
+          onClick={handledownload}
+            variants={fadeUp}
+            className="flex items-center gap-6 mx-auto lg:mx-0"
+          >
+            <button className="px-5 py-3 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer">
+              Download Resume
+            </button>
           </motion.div>
         </motion.div>
 
@@ -124,17 +151,17 @@ const About = () => {
             key={index}
             initial="hidden"
             whileInView="visible"
-             viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: false, amount: 0.6 }}
             variants={fadeUp}
-            className="lg:w-full md:w-[30rem] w-[98vw] mx-auto p-5 bg-[#2B2C2D]/50 rounded-3xl flex flex-col my-5 hover:bg-purple-600 transition-all duration-300 cursor-pointer"
+            className="lg:w-full md:w-[30rem] w-[98vw] group mx-auto p-5 bg-[#2B2C2D]/50 rounded-3xl flex flex-col my-5 hover:bg-purple-600 transition-all duration-300 cursor-pointer"
           >
             <div className="flex justify-between items-center mb-2">
-              <h1 className="lg:text-4xl text-2xl font-bold">{item.title}</h1>
+              <h1 className="lg:text-4xl text-2xl font-bold text-purple-500 group-hover:text-white">{item.title}</h1>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="hidden lg:block bg-purple-500 p-5 rounded-full transition-all duration-300"
+                className="hidden group-hover:bg-white lg:block bg-purple-500 p-5 rounded-full transition-all duration-300"
               >
-                <FaArrowRightLong className="text-2xl -rotate-45 text-white transition-all duration-300" />
+                <FaArrowRightLong className="text-2xl -rotate-45 group-hover:text-purple-500 text-white transition-all duration-300" />
               </motion.button>
             </div>
             <p className="lg:text-lg text-sm">{item.desc}</p>
