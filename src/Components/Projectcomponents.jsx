@@ -1,4 +1,3 @@
-import myself from "../assets/myself.png";
 import { Link, useNavigate } from "react-router-dom";
 import projectdata from "../assets/Data/Project";
 import { FaArrowRight } from "react-icons/fa";
@@ -54,7 +53,7 @@ const Projectcomponents = () => {
               <span onClick={() => { navigate(`/project/${project.title}`), window.scroll(0, 0); }}>
                 <div className="w-full h-[13rem] overflow-hidden">
                   <img
-                    src={project.image ? project.image : myself}
+                    src={project.image ? project.image : null}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />

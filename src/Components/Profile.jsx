@@ -37,7 +37,7 @@ const Profile = () => {
           whileInView="visible"
           viewport={{ once: false }}
           variants={fadedownanimation}
-          className="lg:w-[22rem] md:w-[22rem] md:mx-auto w-[95%] mx-2  rounded-xl bg-[#2B2C2D]/50  py-5 lg:h-[35rem] h-[35rem] flex flex-col justify-between lg:p-5  "
+          className="lg:w-[22rem] md:w-[22rem] md:mx-auto w-[95%] mx-2  rounded-xl bg-[#2B2C2D]/50  py-5 lg:h-[35rem] h-[38rem] flex flex-col justify-between lg:p-5  "
         >
           <span className="lg:w-[17rem] overflow-hidden w-[80%]  lg:h-[18rem] h-[20rem] mx-auto border-4 border-purple-500 rounded-xl">
             <img

@@ -7,7 +7,7 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 import { Tooltip } from "react-tooltip";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({setAichat}) => {
   const links = [
     { to: "/", text: "Home", icon: <IoHome className="mx-auto text-3xl" /> },
     { to: "/about", text: "About", icon: <BsPersonBoundingBox className="mx-auto text-3xl" /> },
@@ -46,6 +46,7 @@ const Navbar = () => {
               return (
                 <li key={index}>
                   <NavLink
+                  onClick={()=>{setAichat(false)}}
                     to={item.to}
                     data-tooltip-id={item.text + index}
                     className={`bg-purple-500   
