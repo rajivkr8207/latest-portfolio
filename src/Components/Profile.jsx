@@ -20,7 +20,7 @@ const Profile = () => {
   ];
   const fadedownanimation = {
     hidden: { y: 100, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 1.5 } },
+    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
   };
   useEffect(() => {
     window.scroll((e) => {
@@ -31,7 +31,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="lg:h-full md:h-[75vh]  h-[84vh] flex flex-col justify-center items-center  mx-auto lg:fixed lg:top-0 lg:z-40">
+      <div className="lg:h-full md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto lg:fixed lg:top-0 lg:z-40">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -44,6 +44,7 @@ const Profile = () => {
               src={profilepic}
               alt="My profile pic"
               className="w-full h-full mx-auto object-cover "
+              loading="lazy" 
             />
           </span>
           <div className="flex flex-col justify-center mt-[-1rem]">

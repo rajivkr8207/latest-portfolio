@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://rj-portfolio.netlify.app/sitemap.xml

@@ -1,5 +1,5 @@
-import article from "../article.png";
-import ecommerce from "../ecomerce.png";
+import article from "../article.webp";
+import ecommerce from "../ecomerce.webp";
 const projectdata = [
   {
     id: 1,
