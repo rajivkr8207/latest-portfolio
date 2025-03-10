@@ -1,4 +1,4 @@
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import profilepic from "../assets/rajiv.webp";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -44,7 +44,7 @@ const Profile = () => {
               src={profilepic}
               alt="My profile pic"
               className="w-full h-full mx-auto object-cover "
-              loading="lazy" 
+              loading="lazy"
             />
           </span>
           <div className="flex flex-col justify-center mt-[-1rem]">
@@ -75,7 +75,7 @@ const Profile = () => {
                 navigate("/contact"), window.scroll(0, 0);
               }}
               className=" px-5 py-3 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
-              >
+            >
               lets Connect
             </button>
           </div>

@@ -62,7 +62,7 @@ const ProjectTemp = () => {
     <>
       <div className=" flex justify-start lg:flex-row flex-col lg:gap-20 gap-10 lg:mx-[6rem]  ">
         <div className="lg:w-[36rem] lg:relative     w-full    lg:mx-3  mx-auto ">
-          <div className="lg:h-[100vh]  w-[98%] lg:mx-0  flex justify-center flex-col   lg:fixed lg:top-0">
+          <div className="lg:h-[100vh] lg:w-[26%] w-[98%] lg:mx-0  flex justify-center flex-col   lg:fixed lg:top-0">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -190,7 +190,7 @@ const ProjectTemp = () => {
             whileInView="visible"
             viewport={{ once: false }}
             variants={fadedownAnimation}
-            className="flex lg:justify-start justify-start my-3 mb-20 "
+            className="flex lg:justify-start justify-start my-3 mb-20 z-50 "
           >
             <Link
               to={`${projectdata.github}`}
@@ -205,7 +205,7 @@ const ProjectTemp = () => {
                 target="_blank"
                 className="px-3 py-2 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
               >
-                Vist Site
+                Vist Sitedfgs
               </Link>
             ) : null}
           </motion.div>

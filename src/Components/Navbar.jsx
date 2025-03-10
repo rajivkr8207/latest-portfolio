@@ -7,10 +7,14 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 import { Tooltip } from "react-tooltip";
 import { motion } from "framer-motion";
 
-const Navbar = ({setAichat}) => {
+const Navbar = ({ setAichat }) => {
   const links = [
     { to: "/", text: "Home", icon: <IoHome className="mx-auto text-3xl" /> },
-    { to: "/about", text: "About", icon: <BsPersonBoundingBox className="mx-auto text-3xl" /> },
+    {
+      to: "/about",
+      text: "About",
+      icon: <BsPersonBoundingBox className="mx-auto text-3xl" />,
+    },
     {
       to: "/project",
       text: "Project",
@@ -29,24 +33,26 @@ const Navbar = ({setAichat}) => {
   ];
   const fadeupanimation = {
     hidden: { y: 100, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration:
-      1 } },
-  }
-  
+    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
   return (
     <>
-      <motion.header  
-      initial="hidden"
-      animate="visible"
-      variants={fadeupanimation}
-      className="lg:flex fixed bottom-0 z-20 ">
+      <motion.header
+        initial="hidden"
+        animate="visible"
+        variants={fadeupanimation}
+        className="lg:flex fixed bottom-0 z-20 "
+      >
         <nav className="flex justify-center items-center   w-[100vw]">
           <ul className="flex  border gap-5 lg:mb-2 rounded-2xl px-5 py-2 bg-black/30 backdrop-blur-lg lg:w-auto md:w-[40vw] w-[95vw] justify-between">
             {links.map((item, index) => {
               return (
                 <li key={index}>
                   <NavLink
-                  onClick={()=>{setAichat(false)}}
+                    onClick={() => {
+                      setAichat(false);
+                    }}
                     to={item.to}
                     data-tooltip-id={item.text + index}
                     className={`bg-purple-500   

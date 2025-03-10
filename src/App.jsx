@@ -22,6 +22,8 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <Navbar setAichat={setAichat} />
+      {aichat && <AiChat setAichat={setAichat} />}
       <Suspense
         fallback={
           <div className="flex justify-center items-center">
@@ -34,8 +36,7 @@ const App = () => {
           </div>
         }
       >
-        <Navbar setAichat={setAichat} />
-        {aichat && <AiChat setAichat={setAichat} />}
+       
         <Routes>
           <Route path="/" element={<Main />}>
             <Route index element={<Home />} />

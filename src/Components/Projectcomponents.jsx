@@ -56,6 +56,7 @@ const Projectcomponents = () => {
                     src={project.image ? project.image : null}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
               </span>
