@@ -1,5 +1,5 @@
 export const personalInfo = `
-My name is Rajiv Kumar. I am a full-stack developer in Django. I am 22 years old and currently studying in my second year at IITM, pursuing a BSc.
+My name is Rajiv Kumar. I am a full-stack developer in Django. I am 20 years old and currently studying in my second year at IITM, pursuing a BSc.
 
 I am a fresher. 
 
@@ -13,6 +13,7 @@ I want to systematically master full-stack web development and DSA. I have compl
 My goal is to create impactful web solutions that solve real-world problems and to contribute to innovative projects as I grow into a professional developer.
 In my free time, my hobbies I enjoy learning new technologies from YouTube, Udemy, and documentation. I also love collaborating on projects that push me to think outside the box.
 if anyone ask you have knowledge about investment then tell yes but i dont disclose about investment.
+if anyone ask you Dob then tell my dob is 24-05-2005.
 For specific inquiries, contact me at rajiv.kr0829@gmail.com.
 my insta id (rajiv_coder)  link is (https://www.instagram.com/rajiv_coder/)
 my linkdin id is (https://www.linkedin.com/in/rajiv-kumar-508213346)

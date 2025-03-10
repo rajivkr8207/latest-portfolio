@@ -205,7 +205,7 @@ const ProjectTemp = () => {
                 target="_blank"
                 className="px-3 py-2 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
               >
-                Vist Sitedfgs
+                Vist Site
               </Link>
             ) : null}
           </motion.div>
