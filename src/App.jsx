@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import AiChat from "./Components/AiChat";
-import { lazy, Suspense, useState } from "react";
+import { lazy, memo, Suspense, useState } from "react";
 import { HiChatAlt2 } from "react-icons/hi";
 import { motion } from "framer-motion";
 import Error from "./Components/Error";
@@ -17,38 +17,34 @@ const Tools = lazy(() => import("./Pages/Tools"));
 const About = lazy(() => import("./Pages/About"));
 const ProjectTemp = lazy(() => import("./Components/ProjectTemp"));
 
+
+const Loading = memo(() => (
+  <div className="flex justify-center items-center min-h-screen">
+    <ReactLoading type="bars" color="purple" height={250} width={300} />
+  </div>
+));
 const App = () => {
   const [aichat, setAichat] = useState(false);
+
+
   return (
     <Router>
       <ScrollToTop />
       <Navbar setAichat={setAichat} />
       {aichat && <AiChat setAichat={setAichat} />}
-      <Suspense
-        fallback={
-          <div className="flex justify-center items-center">
-            <ReactLoading
-              type={"bars"}
-              color={"purple"}
-              height={667}
-              width={375}
-            />
-          </div>
-        }
-      >
+     
        
-        <Routes>
-          <Route path="/" element={<Main />}>
-            <Route index element={<Home />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="project" element={<Project />} />
-            <Route path="tools" element={<Tools />} />
-            <Route path="about" element={<About />} />
-          </Route>
-          <Route path="/project/:name" element={<ProjectTemp />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Suspense>
+       <Routes>
+        <Route path="/" element={<Suspense fallback={<Loading />}><Main /></Suspense>}>
+          <Route index element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
+          <Route path="contact" element={<Suspense fallback={<Loading />}><Contact /></Suspense>} />
+          <Route path="project" element={<Suspense fallback={<Loading />}><Project /></Suspense>} />
+          <Route path="tools" element={<Suspense fallback={<Loading />}><Tools /></Suspense>} />
+          <Route path="about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
+        </Route>
+        <Route path="/project/:name" element={<Suspense fallback={<Loading />}><ProjectTemp /></Suspense>} />
+        <Route path="*" element={<Error />} />
+      </Routes>
       <ToastContainer
         position="top-right"
         autoClose={3000}

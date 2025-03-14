@@ -1,9 +1,9 @@
 import axios from "axios";
-import { personalInfo, API_KEY } from "../assets/aidata";
+import { personalInfo, GEMINI_KEY } from "../assets/aidata";
 
 export async function getAIResponse(question) {
   try {
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
 
     const response = await axios.post(API_URL, {
       contents: [{ role: "user", parts: [{ text: `${personalInfo}\n\nUser Question: ${question}` }] }],

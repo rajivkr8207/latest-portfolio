@@ -61,7 +61,7 @@ const ProjectTemp = () => {
   return (
     <>
       <div className=" flex justify-start lg:flex-row flex-col lg:gap-20 gap-10 lg:mx-[6rem]  ">
-        <div className="lg:w-[36rem] lg:relative     w-full    lg:mx-3  mx-auto ">
+        <div className="lg:w-[36rem]  overflow-hidden lg:relative  w-full    lg:mx-3  mx-auto ">
           <div className="lg:h-[100vh] lg:w-[26%] w-[98%] lg:mx-0  flex justify-center flex-col   lg:fixed lg:top-0">
             <motion.div
               initial="hidden"
@@ -123,7 +123,7 @@ const ProjectTemp = () => {
           whileInView="visible"
           viewport={{ once: false }}
           variants={fadedownAnimation}
-          className="w-full lg:mt-5 mt-0 overflow-hidden "
+          className="w-full lg:mt-5 mt-0 overflow-y-hidden"
         >
           <h1 className="lg:text-5xl text-3xl font-bold lg:text-start text-center lg:mx-0  mx-3 font-[Playfair-Display]">
             {projectdata.title}
