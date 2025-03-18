@@ -139,7 +139,7 @@ const About = () => {
             variants={fadeUp}
             className="flex items-center gap-6 mx-auto lg:mx-0"
           >
-            <button className="px-5 py-3 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer">
+            <button className="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-800 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer">
               Download Resume
             </button>
           </motion.div>

@@ -45,7 +45,7 @@ const Navbar = ({ setAichat }) => {
         className="lg:flex fixed bottom-0 z-20 "
       >
         <nav className="flex justify-center items-center   w-[100vw]">
-          <ul className="flex  border gap-5 lg:mb-2 rounded-2xl px-5 py-2 bg-black/30 backdrop-blur-lg lg:w-auto md:w-[40vw] w-[95vw] justify-between">
+          <ul className="flex z-30  border gap-5 lg:mb-2 rounded-2xl px-5 py-2 bg-black/30 backdrop-blur-lg lg:w-auto md:w-[40vw] w-[95vw] justify-between">
             {links.map((item, index) => {
               return (
                 <li key={index}>

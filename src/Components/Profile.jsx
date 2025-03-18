@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CiLinkedin, CiInstagram } from "react-icons/ci";
+import ParticleCom from './ParticleCom'
+
 const Profile = () => {
   const navigate = useNavigate();
   const links = [
@@ -32,6 +34,8 @@ const Profile = () => {
   return (
     <>
       <div className="lg:h-full md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto lg:fixed lg:top-0 lg:z-40">
+
+              
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -39,6 +43,7 @@ const Profile = () => {
           variants={fadedownanimation}
           className="lg:w-[22rem] md:w-[22rem] md:mx-auto w-[95%] mx-2  rounded-xl bg-[#2B2C2D]/50  py-5 lg:h-[35rem] h-[38rem] flex flex-col justify-between lg:p-5  "
         >
+        
           <span className="lg:w-[17rem] overflow-hidden w-[80%]  lg:h-[18rem] h-[20rem] mx-auto border-4 border-purple-500 rounded-xl">
             <img
               src={profilepic}
@@ -74,7 +79,7 @@ const Profile = () => {
               onClick={() => {
                 navigate("/contact"), window.scroll(0, 0);
               }}
-              className=" px-5 py-3 rounded-lg bg-purple-600 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
+              className=" px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-800 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
             >
               lets Connect
             </button>

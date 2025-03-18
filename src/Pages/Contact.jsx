@@ -113,7 +113,7 @@ const Contact = () => {
               <motion.div variants={fadeUpItem}>
                 <button
                   disabled={state.submitting || loading}
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+                  className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
                 >
                   {loading ? "Sending..." : "Send"}
                 </button>

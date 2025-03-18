@@ -6,7 +6,6 @@ import Collaborate from "../Components/Collaborate";
 import Projectcomponents from "../Components/Projectcomponents";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-
 const Home = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -25,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="lg:hidden flex">
+      <div className="lg:hidden flex z-20">
         <Profile />
       </div>
 
@@ -34,7 +33,7 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: false }}
         variants={fadeUpAnimation}
-        className="md:px-auto"
+        className="md:px-auto z-20"
       >
         <div>
           <h1 className="lg:text-5xl text-4xl font-bold lg:text-start text-center lg:mx-0 mx-3 font-[Playfair-Display]">
@@ -103,7 +102,7 @@ const Home = () => {
                 navigate("/about");
                 window.scroll(0, 0);
               }}
-              className="px-5 lg:py-3 py-2 bg-purple-500 text-white rounded-lg text-lg"
+              className="px-5 lg:py-3 py-2 bg-purple-600 hover:bg-purple-800 text-white rounded-lg text-lg"
             >
               Explore More
             </button>
