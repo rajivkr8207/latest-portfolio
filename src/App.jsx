@@ -5,6 +5,7 @@ import AiChat from "./Components/AiChat";
 import { lazy, memo, Suspense, useState } from "react";
 import { HiChatAlt2 } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { IoSettings } from "react-icons/io5";
 import Error from "./Components/Error";
 // import Loading from "react-loading";
 import ReactLoading from "react-loading";
@@ -17,6 +18,7 @@ const Tools = lazy(() => import("./Pages/Tools"));
 const About = lazy(() => import("./Pages/About"));
 const ProjectTemp = lazy(() => import("./Components/ProjectTemp"));
 import ParticleCom from "./Components/ParticleCom";
+import Particlesetting from "./Components/Particlesetting";
 const Loading = memo(() => (
   <div className="flex justify-center items-center min-h-screen">
     <ReactLoading type="bars" color="purple" height={250} width={300} />
@@ -24,10 +26,13 @@ const Loading = memo(() => (
 ));
 const App = () => {
   const [aichat, setAichat] = useState(false);
+  const [partisetting, setPartisetting] = useState(false);
+
   const [par_network, setPar_network] = useState({
     speed: 5,
     value: 500
   });
+  
   
   return (
     <Router>
@@ -36,6 +41,7 @@ const App = () => {
         <ParticleCom par_network={par_network} />
       </div>
       {aichat && <AiChat setAichat={setAichat} />}
+      {partisetting && <Particlesetting setPartisetting={setPartisetting} par_network={par_network} />}
       <Navbar setAichat={setAichat} />
       <Routes>
         <Route
@@ -109,6 +115,20 @@ const App = () => {
         pauseOnHover
         theme="light"
       />
+      {/* <motion.div
+        initial={{ y: 100, scale: 0.5, opacity: 0 }}
+        animate={{ y: 0, scale: 1, opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="fixed lg:right-10 right-6 lg:top-5 top-20  z-40"
+      >
+        <button
+          onClick={() => setPartisetting(!partisetting)}
+          className="flex flex-col bg-purple-600 hover:bg-purple-800 text-white focus:bg-purple-800 rounded-full p-2 group relative"
+        >
+          <IoSettings className="lg:text-2xl text-3xl group-hover:rotate-180 duration-300" />
+          
+        </button>
+      </motion.div> */}
       <motion.div
         initial={{ y: 100, scale: 0.5, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}

@@ -1,5 +1,5 @@
-import article from "../article.webp";
-import ecommerce from "../ecomerce.webp";
+import article from "../projectpic/article.webp";
+import tasksphere from '../projectpic/tasksphere.webp'
 const projectdata = [
   {
     id: 1,
@@ -77,68 +77,69 @@ const projectdata = [
   },
   {
     id: 2,
-    image: ecommerce,
-    title: "E-commerce",
-    type: "Frontend Project using Vite.js",
+    image: tasksphere,
+    title: "Tasksphere",
+    type: "Frontend Project using Vite+typescript",
     description:
-      "Component Mitra is an e-commerce web application that allows users to browse and purchase products. The platform is built with React.js and provides features like adding products to the cart, removing them, and managing the cart items effectively. This project uses Context API for state management and includes features like local storage persistence and toast notifications for user interactions.",
+      "TaskSphere is a multi-utility web app built with Vite.js, TypeScript, and Tailwind CSS, offering task management, weather updates, and expense tracking.",
     features: [
       {
         id: 1,
-        point: "Browse products and view details.",
+        point: "✅ To-Do App – Task management.",
       },
       {
         id: 2,
-        point: "Add products to the cart and manage cart items.",
+        point: "✅ Weather App – Real-time updates.",
       },
       {
         id: 3,
-        point: "Remove individual items or clear the entire cart.",
+        point: "✅ Expense Tracker – Track income/expenses.",
       },
       {
         id: 4,
-        point: "Toast notifications for adding/removing items.",
-      },
-      {
-        id: 5,
-        point: "Responsive design for various screen sizes.",
-      },
+        point: "⏳ Calculator & Notepad – Coming soon.",
+      }
+    
     ],
     technologies: [
       {
         id: 1,
-        point: "React.js with Tailwind CSS use in Frontend",
+        point: "Vite.js, TypeScript, Tailwind CSS",
       },
+      {
+        id: 2,
+        point: "React Router, LocalStorage, React Hooks",
+      }
     ],
     usage: [
       {
         id: 1,
         point:
-          "Users can explore a wide range of products, filter them by category, and search for specific items based on keywords.",
+          "✅ Manage daily tasks with the To-Do App.",
       },
       {
         id: 2,
         point:
-          "Users can add products to their cart, increase or decrease quantities, and remove items as needed.",
+          "🌦️ Get real-time weather updates.",
       },
       {
         id: 3,
         point:
-          "The cart data is saved using local storage, ensuring that items remain in the cart even after a page refresh.",
+          "💸 Track income and expenses efficiently..",
       },
       {
         id: 4,
         point:
-          "Toast notifications provide instant feedback when items are added or removed from the cart.",
+          "⏳ Perform quick calculations (coming soon)..",
       },
       {
         id: 5,
         point:
-          "The platform is fully responsive, allowing users to shop seamlessly on desktops, tablets, and mobile devices.",
+          "📝 Save and manage notes (coming soon).",
       },
     ],
-    github: "https://github.com/rajivkr8207/ComponentMitra",
-    site: "https://component-mitra.netlify.app/",
+    github: "https://github.com/rajivkr8207/TaskSphere",
+    site: "https://rj-tasksphere.netlify.app/",
   },
 ];
 export default projectdata;

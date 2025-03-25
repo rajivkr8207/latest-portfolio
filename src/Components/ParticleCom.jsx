@@ -6,10 +6,9 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 const ParticleContainer = ({par_network})=>{
-    console.log(par_network)
+    // console.log(par_network)
     const [init, setInit] = useState(false);
 
-    // this should be run only once per application lifetime
     useEffect(() => {
       initParticlesEngine(async (engine) => {
         await loadSlim(engine);
@@ -106,7 +105,7 @@ const ParticleContainer = ({par_network})=>{
   if (init) {
     return (
       <Particles
-      className="z-10 w-full h-full"
+      className="w-full h-full"
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
