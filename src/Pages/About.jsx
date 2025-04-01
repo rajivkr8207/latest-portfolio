@@ -40,7 +40,9 @@ const About = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.3 },
+      transition: { type: "spring", stiffness: 80, damping: 10 }
+
+      // transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.3 },
     },
   };
   const fadedownAnimation = {
@@ -48,7 +50,9 @@ const About = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 },
+      transition: { type: "spring", stiffness: 80, damping: 10 }
+
+      // transition: { duration: 0.5 },
     },
   };
 

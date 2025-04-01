@@ -5,7 +5,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-const ParticleContainer = ({par_network})=>{
+const ParticleContainer = ()=>{
     // console.log(par_network)
     const [init, setInit] = useState(false);
 
@@ -17,7 +17,7 @@ const ParticleContainer = ({par_network})=>{
       });
     }, []);
   
-    const particlesLoaded = (container) => {
+    const particlesLoaded = () => {
     };
     const options = useMemo(
         ()=>({
@@ -80,7 +80,7 @@ const ParticleContainer = ({par_network})=>{
                         enable: true,
                         area: 800,
                     },
-                    value: 140,
+                    value: 80,
                 },
                 opacity: {
                     value: 0.8,

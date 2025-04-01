@@ -18,7 +18,8 @@ const Home = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { type: "spring", stiffness: 80, damping: 10 }
+
     },
   };
 

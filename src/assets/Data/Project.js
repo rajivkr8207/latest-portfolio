@@ -97,7 +97,11 @@ const projectdata = [
       },
       {
         id: 4,
-        point: "⏳ Calculator & Notepad – Coming soon.",
+        point: "✅ Calculator - Perform quick calculations.",
+      },
+      {
+        id: 5,
+        point: "✅ Notepad –  Save and manage notes.",
       }
     
     ],
@@ -130,12 +134,12 @@ const projectdata = [
       {
         id: 4,
         point:
-          "⏳ Perform quick calculations (coming soon)..",
+          "⏳ Perform quick calculations.",
       },
       {
         id: 5,
         point:
-          "📝 Save and manage notes (coming soon).",
+          "📝 Save and manage notes.",
       },
     ],
     github: "https://github.com/rajivkr8207/TaskSphere",

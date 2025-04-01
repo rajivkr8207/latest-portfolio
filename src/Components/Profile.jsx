@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CiLinkedin, CiInstagram } from "react-icons/ci";
-import ParticleCom from './ParticleCom'
-
+import { FaGithub } from "react-icons/fa6";
 const Profile = () => {
   const navigate = useNavigate();
   const links = [
@@ -16,13 +15,21 @@ const Profile = () => {
     },
     {
       id: 2,
+      icon: <FaGithub />,
+      link: "https://github.com/rajivkr8207",
+    },
+    {
+      id: 3,
       icon: <CiLinkedin />,
       link: "https://www.linkedin.com/in/rajiv-kumar-508213346",
     },
+    
   ];
   const fadedownanimation = {
     hidden: { y: 100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+    transition: { type: "spring", stiffness: 80, damping: 10 }
+
   };
   useEffect(() => {
     window.scroll((e) => {

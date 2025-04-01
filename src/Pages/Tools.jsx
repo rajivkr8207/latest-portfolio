@@ -38,7 +38,9 @@ const Tools = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 },
+      transition: { type: "spring", stiffness: 80, damping: 10 }
+
+      // transition: { duration: 0.5 },
     },
   };
 
