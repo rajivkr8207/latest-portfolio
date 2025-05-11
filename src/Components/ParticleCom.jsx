@@ -5,10 +5,9 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-const ParticleContainer = ()=>{
+const ParticleContainer = ({praticlesetting})=>{
     // console.log(par_network)
     const [init, setInit] = useState(false);
-
     useEffect(() => {
       initParticlesEngine(async (engine) => {
         await loadSlim(engine);
@@ -16,9 +15,9 @@ const ParticleContainer = ()=>{
         setInit(true);
       });
     }, []);
-  
     const particlesLoaded = () => {
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const options = useMemo(
         ()=>({
             fullScreen : {
@@ -72,7 +71,7 @@ const ParticleContainer = ()=>{
                         default: "bounce",
                     },
                     random: false,
-                    speed: 2,
+                    speed: praticlesetting.speed,
                     straight: false,
                 },
                 number: {
@@ -80,7 +79,7 @@ const ParticleContainer = ()=>{
                         enable: true,
                         area: 800,
                     },
-                    value: 80,
+                    value: praticlesetting.edge,
                 },
                 opacity: {
                     value: 0.8,
