@@ -25,4 +25,4 @@ I am interested in full-stack development. All answers should be concise (30-40 
 If a specific question is asked, answer only that. Do not provide unnecessary details. If a question is outside my expertise, state that it is "out of syllabus.
 `;
 
-export const GEMINI_KEY = "AIzaSyDMk3aWKp-2ZvrMEU-aZiouo6ZUs0OnbaE"; // Replace with your actual API key
+export const GEMINI_KEY = "AIzaSyDnxugA4BlU63d1FevMeyDWtIWKyG-Q1Cs"; // Replace with your actual API key

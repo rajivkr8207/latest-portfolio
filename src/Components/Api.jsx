@@ -1,23 +1,23 @@
 import axios from "axios";
 import { personalInfo, GEMINI_KEY } from "../assets/aidata";
+import { GoogleGenAI } from "@google/genai";
+const GEMINI_API_KEY = GEMINI_KEY;
+
+const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 export async function getAIResponse(question) {
-  try {
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
-
-    const response = await axios.post(API_URL, {
-      contents: [{ role: "user", parts: [{ text: `${personalInfo}\n\nUser Question: ${question}` }] }],
-    });
-
-
-    // Ensure response contains valid data
-    if (response.data && response.data.candidates && response.data.candidates.length > 0) {
-      return response.data.candidates[0].content.parts[0].text;
-    } else {
-      return "No response received from AI.";
-    }
-  } catch (error) {
-    console.error("AI Error:", error.response?.data || error.message);
-    return "Sorry, I couldn't generate a response.";
+  const response = await ai.models.generateContent({
+    model: "gemini-2.0-flash-001",
+    contents: [
+      {
+        role: "user",
+        parts: [{ text: `${personalInfo}\n\nUser Question: ${question}` }],
+      },
+    ],
+  });
+  if (response) {
+    return response.text;
+  } else {
+    return "No response received from AI.";
   }
 }
