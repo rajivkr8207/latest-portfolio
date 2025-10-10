@@ -5,11 +5,11 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  scrollbar-width: thin; 
-  scrollbar-color: #9333EA transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea transparent;
 }
 
-html{
+html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -35,10 +35,28 @@ nav ul li .active span {
 }
 @media (max-width: 786px) {
   body {
-    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
   }
 }
+/* .card-container {
+  perspective: 1000px;
+  width: 300px;
+  height: 400px;
+}
+.profile-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(204, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.profile-card:hover {
+  transform: rotateY(15deg) rotateX(10deg);
+} */

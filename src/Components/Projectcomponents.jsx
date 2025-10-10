@@ -40,7 +40,7 @@ const Projectcomponents = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeUpAnimation}
-          className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 my-5"
+          className="flex flex-wrap gap-3 my-5"
         >
           {projectdata.map((project, index) => (
             <motion.div
