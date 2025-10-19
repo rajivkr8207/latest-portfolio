@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CiLinkedin, CiInstagram } from "react-icons/ci";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
+
 import Tilt from "react-parallax-tilt";
 const Profile = () => {
   const navigate = useNavigate();
@@ -22,7 +23,12 @@ const Profile = () => {
     {
       id: 3,
       icon: <CiLinkedin />,
-      link: "https://www.linkedin.com/in/rajiv-kumar-508213346",
+      link: "https://www.linkedin.com/in/rajiv-kumar-a14999386",
+    },
+    {
+      id: 4,
+      icon: <FaXTwitter />,
+      link: "https://x.com/Rajivkr8207",
     },
   ];
   const fadedownanimation = {
@@ -39,7 +45,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="lg:h-full card-container md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto lg:fixed lg:top-0 lg:z-40">
+      <div className="profilecard lg:h-full card-container md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto ">
         <Tilt>
           <div
             initial="hidden"

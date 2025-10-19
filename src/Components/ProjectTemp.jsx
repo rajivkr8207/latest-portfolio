@@ -60,9 +60,10 @@ const ProjectTemp = () => {
 
   return (
     <>
-      <div className=" flex justify-start lg:flex-row flex-col lg:gap-20 gap-10 lg:mx-[6rem]  ">
+      <div className="project-card-main flex justify-center items-center">
+        <div className="project-temp flex justify-start lg:flex-row flex-col lg:gap-20 gap-10 lg:mx-[6rem]  ">
         <div className="lg:w-[36rem]  overflow-hidden lg:relative  w-full    lg:mx-3  mx-auto ">
-          <div className="lg:h-[100vh] lg:w-[26%] w-[98%] lg:mx-0  flex justify-center flex-col   lg:fixed lg:top-0">
+          <div className="project-side-card lg:h-[100vh] lg:w-[26%] w-[98%] lg:mx-0  flex justify-center flex-col   ">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -77,8 +78,8 @@ const ProjectTemp = () => {
                   className="w-full h-full mx-auto object-cover"
                 />
               </span>
-              <div className="flex flex-col justify-center ">
-                <h1 className="text-center text-3xl text-white font-bold  font-[Playfair-Display]">
+              <div className="flex flex-col justify-center mt-3 ">
+                <h1 className="text-center text-3xl text-white font-bold  capitalize font-[Playfair-Display]">
                   {projectdata.title}
                 </h1>
                 <p className="text-center text-md text-purple-500 ">
@@ -125,7 +126,7 @@ const ProjectTemp = () => {
           variants={fadedownAnimation}
           className="w-full lg:mt-5 mt-0 overflow-y-hidden"
         >
-          <h1 className="lg:text-5xl text-3xl font-bold lg:text-start text-center lg:mx-0  mx-3 font-[Playfair-Display]">
+          <h1 className="lg:text-5xl text-3xl font-bold  capitalize lg:text-start text-center lg:mx-0  mx-3 font-[Playfair-Display]">
             {projectdata.title}
           </h1>
           <p className="my-4 lg:text-lg text-sm lg:text-start text-center lg:mx-0 mx-3">
@@ -210,6 +211,7 @@ const ProjectTemp = () => {
             ) : null}
           </motion.div>
         </motion.div>
+      </div>
       </div>
     </>
   );

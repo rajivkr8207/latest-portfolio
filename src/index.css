@@ -41,22 +41,37 @@ nav ul li .active span {
     color: white;
   }
 }
-/* .card-container {
-  perspective: 1000px;
-  width: 300px;
-  height: 400px;
+main {
+  /* max-width: 2000px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.profile-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(204, 0, 0, 0.2);
-  cursor: pointer;
+main > div {
+  padding: 2rem;
+  max-width: 1500px;
 }
-
-.profile-card:hover {
-  transform: rotateY(15deg) rotateX(10deg);
-} */
+.project-temp {
+  max-width: 1500px;
+}
+@media (min-width: 1024px) and (max-width: 1130px) {
+  .profilecard, .project-side-card {
+    position: fixed;
+    top: 0%;
+    left: 3%;
+  }
+}
+@media (min-width: 1130px) and (max-width: 1500px) {
+  .profilecard, .project-side-card {
+    position: fixed;
+    top: 0%;
+    left: 5%;
+  }
+}
+@media (min-width: 1500px) and (max-width: 2000px) {
+  .profilecard, .project-side-card {
+    position: fixed;
+    top: 0%;
+    left: 15%;
+  }
+}

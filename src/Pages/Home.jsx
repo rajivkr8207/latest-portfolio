@@ -93,7 +93,7 @@ const Home = () => {
                 Projects
                 <FaArrowRightLong className="text-2xl text-gray-400 group-hover:text-purple-600 ml-3 group-hover:ml-5 transition-all duration-300" />
               </p>
-              <h1 className="lg:text-4xl text-2xl font-bold text-white">+5</h1>
+              <h1 className="lg:text-4xl text-2xl font-bold text-white">10+</h1>
             </motion.div>
           </div>
 

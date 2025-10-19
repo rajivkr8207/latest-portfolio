@@ -1,5 +1,6 @@
 import article from "../projectpic/article.webp";
-import tasksphere from '../projectpic/tasksphere.webp'
+import tasksphere from '../projectpic/tasksphere.webp';
+import studio from '../projectpic/studio.webp';
 const projectdata = [
   {
     id: 1,
@@ -144,6 +145,59 @@ const projectdata = [
     ],
     github: "https://github.com/rajivkr8207/TaskSphere",
     site: "https://rj-tasksphere.netlify.app/",
+  },
+  {
+    id: 2,
+    image: studio,
+    title: "studio-template",
+    type: "Frontend Project using html scss",
+    description:
+      "A modern, dark-themed fashion agency website designed to help brands showcase their identity with elegance and creativity.",
+    features: [
+      {
+        id: 1,
+        point: "Fully responsive grid layout for all screen sizes",
+      },
+      {
+        id: 2,
+        point: "Dark elegant theme with minimal, luxury-style UI",
+      },
+      {
+        id: 3,
+        point: "Clean, structured design emphasizing brand storytelling",
+      },
+      {
+        id: 4,
+        point: "High-quality image gallery and team showcase section",
+      },
+        
+    ],
+    technologies: [
+      {
+        id: 1,
+        point: "HTML5, SCSS",
+      },
+      
+    ],
+    usage: [
+      {
+        id: 1,
+        point:
+          "Ideal for fashion studios, creative agencies, and personal portfolios",
+      },
+      {
+        id: 2,
+        point:
+          "Demonstrates front-end design & development expertise",
+      },
+      {
+        id: 3,
+        point:
+          "Highlights skills in layout design, responsiveness, and UX clarity",
+      },
+    ],
+    github: "https://github.com/rajivkr8207/studio-template",
+    site: "https://rajivkr8207.github.io/studio-template/",
   },
 ];
 export default projectdata;
