@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import profilepic from "../assets/rajiv.webp";
-import { motion } from "framer-motion";
+import profilepic from "../assets/rjpic.png";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CiLinkedin, CiInstagram } from "react-icons/ci";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Tilt from "react-parallax-tilt";
 const Profile = () => {
   const navigate = useNavigate();
@@ -56,11 +55,15 @@ const Profile = () => {
             data-tilt
           >
             <span className="lg:w-[17rem] overflow-hidden w-[80%]  lg:h-[18rem] h-[20rem] mx-auto border-4 border-purple-500 rounded-xl">
-              <img
-                src={profilepic}
+              <LazyLoadImage
                 alt="My profile pic"
-                className="w-full h-full mx-auto object-cover "
-                loading="lazy"
+                // effect="blur"
+                wrapperProps={{
+                  style: { transitionDelay: "1s" },
+                }}
+                scrollPosition={0}
+                src={profilepic}
+                className="w-full h-full mx-auto object-fill "
               />
             </span>
             <div className="flex flex-col justify-center mt-[-1rem]">
