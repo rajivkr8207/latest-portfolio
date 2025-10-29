@@ -40,11 +40,7 @@ const Contact = () => {
 
   return (
     <>
-{loading?
-    <div className="w-full h-screen absolute top-0 left-0 z-10">
-      <img src="" alt="" />
-    </div> : null }
-      <div>
+      <div className="w-full">
         <motion.h1
           initial="hidden"
           whileInView="visible"

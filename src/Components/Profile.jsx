@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import profilepic from "../assets/rjpic.png";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CiLinkedin, CiInstagram } from "react-icons/ci";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
@@ -46,7 +47,7 @@ const Profile = () => {
     <>
       <div className="profilecard lg:h-full card-container md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto ">
         <Tilt>
-          <div
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -57,7 +58,6 @@ const Profile = () => {
             <span className="lg:w-[17rem] overflow-hidden w-[80%]  lg:h-[18rem] h-[20rem] mx-auto border-4 border-purple-500 rounded-xl">
               <LazyLoadImage
                 alt="My profile pic"
-                // effect="blur"
                 wrapperProps={{
                   style: { transitionDelay: "1s" },
                 }}
@@ -98,7 +98,7 @@ const Profile = () => {
                 lets Connect
               </button>
             </div>
-          </div>
+          </motion.div>
         </Tilt>
       </div>
     </>

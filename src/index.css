@@ -48,30 +48,42 @@ main {
   align-items: center;
 }
 main > div {
-  padding: 2rem;
+  /* padding: 2rem; */
   max-width: 1500px;
 }
 .project-temp {
   max-width: 1500px;
 }
 @media (min-width: 1024px) and (max-width: 1130px) {
-  .profilecard, .project-side-card {
+  .profilecard,
+  .project-side-card {
     position: fixed;
     top: 0%;
     left: 3%;
   }
+  main > div {
+    padding: 2rem;
+  }
 }
 @media (min-width: 1130px) and (max-width: 1500px) {
-  .profilecard, .project-side-card {
+  .profilecard,
+  .project-side-card {
     position: fixed;
     top: 0%;
     left: 5%;
   }
+  main > div {
+    padding: 2rem;
+  }
 }
 @media (min-width: 1500px) and (max-width: 2000px) {
-  .profilecard, .project-side-card {
+  .profilecard,
+  .project-side-card {
     position: fixed;
     top: 0%;
     left: 15%;
+  }
+  main > div {
+    padding: 2rem;
   }
 }

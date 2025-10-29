@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
-
+import { MdOutlineWifiTetheringError } from "react-icons/md";
 
 const Error = () => {
   return (
     <>
     <div className="flex flex-col items-center justify-center h-screen gap-5">
+    <MdOutlineWifiTetheringError className="text-[10rem]" />
       <h1 className="text-4xl font-semibold text-white md:text-5xl">404 Page Not Found</h1>
       <Link
         to="/"

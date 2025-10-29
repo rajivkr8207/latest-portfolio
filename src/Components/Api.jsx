@@ -1,9 +1,8 @@
 import axios from "axios";
-import { personalInfo, GEMINI_KEY } from "../assets/aidata";
+import { personalInfo, GAME_KEY } from "../assets/aidata";
 import { GoogleGenAI } from "@google/genai";
-const GEMINI_API_KEY = GEMINI_KEY;
 
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: GAME_KEY });
 
 export async function getAIResponse(question) {
   const response = await ai.models.generateContent({

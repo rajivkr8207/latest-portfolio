@@ -39,4 +39,4 @@ X (Twitter) – [@Rajivkr8207](https://x.com/Rajivkr8207)
 `;
 
 
-export const GEMINI_KEY = "AIzaSyDnxugA4BlU63d1FevMeyDWtIWKyG-Q1Cs"; // Replace with your actual API key
+export const GAME_KEY = "AIzaSyDnxugA4BlU63d1FevMeyDWtIWKyG-Q1Cs"; // Replace with your actual API key
