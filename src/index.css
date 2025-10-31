@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: lato;
+  src: url("../public/font/lato2.woff2") format("woff2");
+}
+
 * {
   margin: 0%;
   padding: 0%;
@@ -14,22 +20,39 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Lato", serif;
+  font-family: lato;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
   overflow-x: hidden;
   background: rgb(29, 28, 28);
   background-image: url("./assets/bgblend.webp"),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
-  background-blend-mode: overlay; /* Blend the image with the black color */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 
   color: white;
 }
-
+.blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  border-radius: 100%;
+  background-image: linear-gradient(#8d4aea 10%, #8630ff);
+  filter: blur(250px);
+  transition: all 450ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: -1;
+  display: none;
+}
 nav ul li .active span {
   background: #8d4aea;
   scale: 1.1;
@@ -53,6 +76,12 @@ main > div {
 }
 .project-temp {
   max-width: 1500px;
+}
+
+@media (min-width: 1025px) {
+  .blob {
+    display: block;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1130px) {
   .profilecard,

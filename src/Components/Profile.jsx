@@ -7,6 +7,7 @@ import { CiLinkedin, CiInstagram } from "react-icons/ci";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Tilt from "react-parallax-tilt";
+import Buttoncus from "./Buttoncus";
 const Profile = () => {
   const navigate = useNavigate();
   const links = [
@@ -89,14 +90,12 @@ const Profile = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <button
+              <Buttoncus
                 onClick={() => {
                   navigate("/contact"), window.scroll(0, 0);
                 }}
-                className=" px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-800 text-white lg:flex justify-center lg:mx-3 mx-auto cursor-pointer"
-              >
-                lets Connect
-              </button>
+                name="lets Connect"
+              />
             </div>
           </motion.div>
         </Tilt>

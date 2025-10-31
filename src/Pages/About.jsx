@@ -136,7 +136,7 @@ const About = () => {
               Projects
               <FaArrowRightLong className="text-2xl text-gray-400 ml-3 transition-all group-hover:text-purple-600 group-hover:ml-5 duration-300" />
             </p>
-            <h1 className="lg:text-4xl text-2xl font-bold text-white">+5</h1>
+            <h1 className="lg:text-4xl text-2xl font-bold text-white">10+</h1>
           </motion.div>
           <motion.div
           onClick={handledownload}

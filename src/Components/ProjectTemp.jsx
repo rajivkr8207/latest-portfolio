@@ -4,6 +4,7 @@ import projectdatajson from "../assets/Data/Project";
 import ReactLoading from "react-loading";
 import { motion } from "framer-motion";
 import Error from "./Error";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProjectTemp = () => {
   const { name } = useParams();
@@ -72,9 +73,9 @@ const ProjectTemp = () => {
               className="lg:w-[22rem]  md:w-[22rem] lg:mx-0 md:mx-auto w-[98%] mx-2  rounded-xl bg-[#2B2C2D]/50  lg:py-5 py-3 lg:h-[34rem] h-[35rem] flex flex-col justify-start lg:p-5 "
             >
               <span className="lg:w-[20rem] overflow-hidden w-[95%] h-[16rem] mx-auto border-4 border-purple-500 rounded-xl">
-                <img
+                <LazyLoadImage
                   src={projectdata.image ? projectdata.image : null}
-                  alt=""
+                  alt={projectdata.title}
                   className="w-full h-full mx-auto object-cover"
                 />
               </span>
