@@ -46,7 +46,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="profilecard lg:h-full card-container md:h-[75vh]  h-auto mb-3 flex flex-col justify-center items-center  mx-auto ">
+      <div className="profilecard lg:h-full card-container   h-auto mb-3 flex flex-col justify-center items-center  mx-auto ">
         <Tilt>
           <motion.div
             initial="hidden"
